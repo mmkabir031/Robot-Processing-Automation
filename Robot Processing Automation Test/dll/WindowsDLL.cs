@@ -7,7 +7,11 @@ namespace Robot_Processing_Automation_Test.DLL
 {
     public static class WindowsDLL
     {
-        
+
+        [DllImport("user32.dll")]
+        public static extern int GetWindowText(IntPtr hWnd, StringBuilder text, int count);
+
+
         [DllImport("user32.dll")]
         public static extern IntPtr GetForegroundWindow();
 
